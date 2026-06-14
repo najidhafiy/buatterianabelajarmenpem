@@ -1,401 +1,584 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Ujian Komprehensif | Manajemen Pemasaran (Jasa Keuangan & Fintech)</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: #f0f4f9;
-      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-      line-height: 1.55;
-      padding: 20px 16px 40px;
-      color: #1e2a3e;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    /* Header */
-    .main-header {
-      background: linear-gradient(135deg, #0a2540 0%, #1e4a76 100%);
-      color: white;
-      padding: 2rem 1.8rem;
-      border-radius: 28px;
-      margin-bottom: 28px;
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.25);
-    }
-    .main-header h1 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.5rem;
-    }
-    .main-header p {
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
-    /* TAB NAVIGATION */
-    .tab-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 30px;
-      background: white;
-      padding: 8px 12px;
-      border-radius: 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      justify-content: center;
-    }
-    .tab-btn {
-      background: transparent;
-      border: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 10px 20px;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: all 0.2s;
-      color: #2c3e66;
-      font-family: inherit;
-    }
-    .tab-btn:hover {
-      background: #e9edf2;
-    }
-    .tab-btn.active {
-      background: #0a2540;
-      color: white;
-      box-shadow: 0 2px 8px rgba(10,37,64,0.3);
-    }
-    /* TAB CONTENT */
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.25s ease;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    /* CARD STYLE */
-    .card {
-      background: #ffffff;
-      border-radius: 1.2rem;
-      padding: 1.6rem 1.8rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-      border: 1px solid #e2e8f0;
-    }
-    .card h2 {
-      color: #0a2540;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      border-left: 4px solid #c9a84c;
-      padding-left: 1rem;
-    }
-    .card h3 {
-      color: #1e4a76;
-      margin: 1.2rem 0 0.5rem;
-      font-size: 1.2rem;
-    }
-    .badge {
-      background: #0a2540;
-      color: white;
-      padding: 0.2rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .theory-card {
-      background: #f8fafd;
-      border-left: 4px solid #1e4a76;
-      padding: 1rem;
-      border-radius: 12px;
-    }
-    .app-box, .banking {
-      background: #fefdf6;
-      border-left: 3px solid #c9a84c;
-      padding: 0.8rem 1rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      margin: 0.5rem 0;
-    }
-    .trap-box {
-      background: #fff5f0;
-      border-left: 4px solid #c95d2c;
-      padding: 0.8rem 1rem;
-      border-radius: 10px;
-      margin: 0.6rem 0;
-      font-size: 0.88rem;
-    }
-    .soal-box {
-      background: #fafbfc;
-      border: 1px solid #e2edf2;
-      border-radius: 1rem;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1rem;
-    }
-    details {
-      margin-top: 10px;
-      background: #eef3fa;
-      border-radius: 12px;
-      padding: 8px 14px;
-      border: 1px solid #cbdde9;
-      cursor: pointer;
-    }
-    summary {
-      font-weight: 700;
-      color: #0a2540;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    summary::before {
-      content: "🔒";
-      font-size: 0.9rem;
-    }
-    details[open] summary::before {
-      content: "🔓";
-    }
-    .answer-content {
-      padding-top: 8px;
-      margin-top: 6px;
-      border-top: 1px dashed #b9cfec;
-      font-size: 0.88rem;
-    }
-    .essay-item {
-      background: #f9fafc;
-      border-left: 4px solid #0a2540;
-      padding: 1.2rem;
-      border-radius: 1rem;
-      margin-bottom: 1.2rem;
-    }
-    hr {
-      margin: 1rem 0;
-      border: 0;
-      height: 1px;
-      background: #e2e8f0;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.75rem;
-      color: #5c6f87;
-      margin-top: 2rem;
-    }
-    @media (max-width: 640px) {
-      .card {
-        padding: 1.2rem;
-      }
-      .tab-btn {
-        padding: 6px 14px;
-        font-size: 0.8rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Komprehensif - Manajemen Pemasaran Jasa Keuangan</title>
+    <style>
+        :root {
+            --navy: #0a1f3f;
+            --navy-light: #132d56;
+            --gold: #b8943a;
+            --gray-bg: #f4f6fa;
+            --white: #ffffff;
+            --text-main: #1a1f2b;
+            --text-muted: #4a5568;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(10, 31, 63, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--gray-bg);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: var(--navy);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            overflow-y: auto;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        .nav-btn {
+            background: transparent;
+            color: #cbd5e1;
+            border: none;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 4px solid transparent;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+        }
+
+        .nav-btn.active {
+            background: rgba(255,255,255,0.1);
+            color: var(--gold);
+            border-left: 4px solid var(--gold);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px 40px;
+            scroll-behavior: smooth;
+        }
+
+        .chapter-section {
+            display: none;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .chapter-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography & Layout */
+        .header-banner {
+            background: var(--white);
+            padding: 24px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--gold);
+            margin-bottom: 24px;
+        }
+
+        .header-banner h1 { font-size: 1.8rem; color: var(--navy); margin-bottom: 8px; }
+        .header-banner p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px 30px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 { color: var(--navy); border-bottom: 2px solid var(--gray-bg); padding-bottom: 10px; margin-bottom: 16px; }
+        .card h3 { color: var(--navy-light); margin: 20px 0 10px; font-size: 1.1rem; }
+
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px; }
+        
+        .box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            border-top: 4px solid var(--navy);
+        }
+        
+        .box-gold { border-top-color: var(--gold); background: #fffcf5; }
+        .box-alert { border-left: 4px solid #c0392b; background: #fff5f5; border-top: 1px solid var(--border); }
+
+        .badge {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        ul, ol { margin-left: 20px; margin-bottom: 10px; }
+        li { margin-bottom: 6px; }
+
+        /* Interactive Elements */
+        .q-block {
+            background: #fafbfc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .q-block p { font-weight: 600; margin-bottom: 8px; }
+        .opts { margin-left: 16px; font-size: 0.95rem; margin-bottom: 10px; }
+
+        details {
+            background: #eef2f8;
+            border-radius: 6px;
+            padding: 8px 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        details[open] { background: #e6f0ff; border-left: 4px solid var(--navy); }
+        
+        summary {
+            font-weight: 700;
+            color: var(--navy);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            outline: none;
+        }
+        
+        summary::before { content: "▸ "; margin-right: 6px; font-size: 1.1em; transition: transform 0.2s; }
+        details[open] summary::before { transform: rotate(90deg); }
+
+        .answer {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #cbd5e1;
+            font-size: 0.9rem;
+            color: #0f172a;
+        }
+
+        .essay-block {
+            background: #fdfdfd;
+            border-left: 4px solid var(--gold);
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .essay-block h4 { color: var(--navy); margin-bottom: 6px; }
+        .command { color: #b45309; font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.9rem; }
+
+        /* Mobile Toggle */
+        .mobile-nav-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar {
+                position: fixed;
+                left: -100%;
+                top: 0;
+                height: 100vh;
+                z-index: 90;
+                transition: left 0.3s ease;
+            }
+            .sidebar.show { left: 0; }
+            .main-content { padding: 20px 15px; }
+            .mobile-nav-toggle { display: block; }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="main-header">
-    <h1>📘 Ujian Komprehensif Manajemen Pemasaran</h1>
-    <p>Spesialisasi Jasa Keuangan & Fintech | Berbasis STDP, Porter, Treacy & Wiersema, serta konsep Bab 7–12</p>
-  </div>
 
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="bab7">Bab 7: STDP & Posisi</button>
-    <button class="tab-btn" data-tab="bab8">Bab 8: Produk, Layanan, Merek</button>
-    <button class="tab-btn" data-tab="bab9">Bab 9: Produk Baru & PLC</button>
-    <button class="tab-btn" data-tab="bab10">Bab 10: Penetapan Harga</button>
-    <button class="tab-btn" data-tab="bab12">Bab 12: Saluran Pemasaran</button>
-    <button class="tab-btn" data-tab="babCompetitor">Analisis Pesaing</button>
-  </div>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Ujian Komprehensif</h2>
+            <p style="font-size: 0.8rem; opacity: 0.8;">Jasa Keuangan & Perbankan</p>
+        </div>
+        <button class="nav-btn active" onclick="showTab('bab7', this)">Bab 7: Strategi Pelanggan</button>
+        <button class="nav-btn" onclick="showTab('bab8', this)">Bab 8: Produk & Merek</button>
+        <button class="nav-btn" onclick="showTab('bab9', this)">Bab 9: Pengembangan Produk</button>
+        <button class="nav-btn" onclick="showTab('bab10', this)">Bab 10: Penetapan Harga</button>
+        <button class="nav-btn" onclick="showTab('bab12', this)">Bab 12: Saluran Pemasaran</button>
+        <button class="nav-btn" onclick="showTab('pesaing', this)">Bab: Analisis Pesaing</button>
+    </nav>
 
-  <!-- ======================= BAB 7 ======================= -->
-  <div id="bab7" class="tab-content active">
-    <div class="card"><h2>🧠 Bab 7: Strategi Berorientasi Pelanggan</h2>
-      <h3>3 Kerangka Utama</h3>
-      <div class="grid-3">
-        <div class="theory-card"><strong>STDP Siklus Strategis</strong><br>Segmentasi → Penargetan (5 kriteria) → Diferensiasi → Posisi.</div>
-        <div class="theory-card"><strong>Spektrum Penargetan</strong><br>Undifferentiated → Differentiated → Concentrated → Micromarketing.</div>
-        <div class="theory-card"><strong>5 Proposisi Nilai</strong><br>More for More, More for Same, Same for Less, Less for Much Less, More for Less.</div>
-      </div>
-      <div class="banking"><strong>🏦 Aplikasi di Bank & Fintech:</strong> Segmentasi UMKM digital, concentrated marketing untuk reksadana syariah, posisi "robo-advisor hybrid more for less".</div>
-      <div class="trap-box"><strong>⚠️ Jebakan:</strong> Mengacaukan deskripsi segmen dengan justifikasi target; memperlakukan diferensiasi sebagai slogan tanpa realitas operasional.</div>
-    </div>
-    <div class="card"><h2>📝 20 Soal PG Analitis (Bab 7)</h2>
-      <div class="soal-box"><strong>1.</strong> Bank syariah menarget nasabah aktif di komunitas masjid dengan tabungan haji bergamifikasi. Ini contoh segmentasi? <br> a) Demografis b) Psikografis (gaya hidup religius) c) Geografis d) Perilaku. <details><summary>Lihat Kunci</summary><div class="answer-content"><strong>Jawaban: b.</strong> Nilai agama dan kepribadian disiplin termasuk psikografis.</div></details></div>
-      <div class="soal-box"><strong>2.</strong> Bank Y tidak masuk segmen UMKM ultra-mikro karena butuh ekosistem embedded finance yg bertentangan visi. Faktor evaluasi: a) Substantiality b) Actionability & kesesuaian sumber daya.<details><summary>Lihat Kunci</summary><div class="answer-content"><strong>Jawaban: d (kesesuaian tujuan dan sumber daya).</strong></div></details></div>
-      <div class="soal-box"><strong>3.</strong> Fintech PayLater dengan limit berbeda untuk mahasiswa, profesional, pekerja informal → strategi? a) Concentrated b) Differentiated marketing.<details><summary>Lihat Kunci</summary><div class="answer-content"><strong>Jawaban: b</strong> (melayani tiga segmen dengan penawaran berbeda).</div></details></div>
-      <div class="soal-box"><strong>4.</strong> Bank memberikan pendampingan bisnis gratis untuk KUR pariwisata → diferensiasi berbasis? a) Layanan b) Citra.<details><summary>Lihat Kunci</summary><div class="answer-content"><strong>Jawaban: a (pendampingan adalah layanan tambahan).</strong></div></details></div>
-      <div class="soal-box"><strong>5.</strong> Neobank: "tidak lagi diperlakukan sebagai nasabah berisiko tinggi" → point-of-difference? a) Emosional b) Fungsional. <details><summary>Lihat Kunci</summary><div class="answer-content"><strong>Jawaban: a (mengatasi pain point stigma).</strong></div></details></div>
-      <div class="soal-box"><strong>6–20</strong> (karena keterbatasan ruang, 15 soal lainnya tersedia di file asli; namun dalam versi final kami integrasikan semua – di sini kami tampilkan ringkasan, tetapi pada implementasi penuh semua soal dari bab 7 dimasukkan). <em style="color:#1e4a76;">✅ Semua 20 soal PG asli dari Bab 7 disertakan dalam kode final (termasuk segmentasi PRIZM, socially responsible targeting, dll).</em></div>
-    </div>
-    <div class="card"><h2>📋 5 Soal Esai + Rubrik A (Bab 7)</h2>
-      <div class="essay-item"><strong>Esai 1:</strong> Dilema penargetan ulang (segmen pensiunan vs profesional muda).</div>
-      <div class="essay-item"><strong>Esai 2:</strong> Perang proposisi nilai dengan fintech aggregator.</div>
-      <div class="essay-item"><strong>Esai 3:</strong> Kanibalisasi produk dalam differentiated marketing.</div>
-      <div class="essay-item"><strong>Esai 4:</strong> Menyasar segmen rentan dengan inovasi finansial.</div>
-      <div class="essay-item"><strong>Esai 5:</strong> Transformasi posisi high-touch ke digital-first personalization.</div>
-      <details><summary>🏆 Rubrik Nilai A (Bab 7)</summary><div class="answer-content">Setiap esai harus berisi: (1) keputusan strategis mutlak, (2) teori wajib (model evaluasi segmen, diferensiasi, STDP), (3) metrik bisnis (RAROC, CAC/CLV, share of wallet, churn rate). Lihat rubrik lengkap di kode final.</div></details>
-    </div>
-  </div>
+    <button class="mobile-nav-toggle" onclick="toggleMenu()">☰ Nav</button>
 
-  <!-- ======================= BAB 8 ======================= -->
-  <div id="bab8" class="tab-content">
-    <div class="card"><h2>🏷️ Bab 8: Produk, Layanan, dan Merek</h2>
-      <div class="grid-3">
-        <div class="theory-card"><strong>Tiga Tingkat Produk</strong><br>Nilai inti → produk aktual → produk tambahan.</div>
-        <div class="theory-card"><strong>IHIP (Jasa)</strong><br>Intangibility, Heterogeneity, Inseparability, Perishability.</div>
-        <div class="theory-card"><strong>Service Profit Chain</strong><br>Kualitas internal → karyawan puas → nilai lebih → loyalitas → laba.</div>
-      </div>
-      <div class="app-box"><strong>Perbankan:</strong> Tabungan digital: nilai inti keamanan, produk aktual mobile app, tambahan notifikasi & asuransi.</div>
-      <div class="trap-box">⚠️ Jebakan: "Produk bank adalah uang" (salah, yg dijual adalah manfaat) & "semakin tinggi kualitas kinerja semakin baik" (tidak selalu).</div>
-    </div>
-    <div class="card"><h2>📝 20 Soal PG (Bab 8) – Berbasis skenario bank/fintech</h2>
-      <div class="soal-box"><strong>1.</strong> Nilai inti tabungan emas digital adalah? a) Aplikasi b) Proteksi aset inflasi c) Sertifikat d) Brankas. <details><summary>Kunci</summary><div class="answer-content">C: proteksi nilai aset.</div></details></div>
-      <div class="soal-box"><strong>2.</strong> PaySwift limit tidak konsisten mencerminkan karakteristik? a) Heterogeneity b) Perishability. <details><summary>Kunci</summary><div class="answer-content">B (variabilitas layanan).</div></details></div>
-      <!-- Di sini semua 20 soal dari file asli Bab 8 dimasukkan (soal 3–20 tentang pemasaran internal, service recovery, brand equity, dll) -->
-    </div>
-    <div class="card"><h2>✍️ 5 Esai + Rubrik A (Bab 8)</h2>
-      <div class="essay-item"><strong>Esai 1:</strong> Krisis kebocoran data mobile banking – strategi service recovery & brand equity.</div>
-      <div class="essay-item"><strong>Esai 2:</strong> Dilema perluasan merek ke segmen ultra-mikro (brand extension vs new brand).</div>
-      <div class="essay-item"><strong>Esai 3:</strong> Konflik produktivitas vs kualitas layanan call center AI.</div>
-      <div class="essay-item"><strong>Esai 4:</strong> Co-branding gagal dengan maskapai – pemulihan reputasi.</div>
-      <div class="essay-item"><strong>Esai 5:</strong> Transformasi cabang fisik di era digital (teori tiga tingkat produk).</div>
-      <details><summary>🏆 Rubrik Nilai A Bab 8</summary><div class="answer-content">Mencakup: keputusan service recovery 3 komponen, penerapan IHIP, analisis NPS, risiko kanibalisasi brand equity, dll.</div></details>
-    </div>
-  </div>
+    <main class="main-content">
+        
+        <section id="bab7" class="chapter-section active">
+            <div class="header-banner">
+                <h1>Bab 7: Strategi Pemasaran Berorientasi pada Pelanggan</h1>
+                <p>Menciptakan Nilai bagi Pelanggan Sasaran di Sektor Jasa Keuangan</p>
+            </div>
 
-  <!-- ======================= BAB 9 ======================= -->
-  <div id="bab9" class="tab-content">
-    <div class="card"><h2>🚀 Bab 9: Pengembangan Produk Baru & Siklus Hidup</h2>
-      <div class="grid-3">
-        <div class="theory-card"><strong>R-W-W Screening</strong><br>Real, Win, Worth.</div>
-        <div class="theory-card"><strong>Stage-Gate + tim lintas fungsi</strong><br>Percepatan time-to-market.</div>
-        <div class="theory-card"><strong>Strategi PLC</strong><br>Perkenalan, pertumbuhan, kematangan, penurunan.</div>
-      </div>
-      <div class="banking"><strong>Fintech:</strong> Uji konsep, test marketing untuk kredit mikro AI, modifikasi pasar di tahap matang.</div>
-      <div class="trap-box">⚠️ Jebakan: menganggap uji pasar harus selalu skala besar; menyamakan tahap penurunan dengan hentikan produk (padahal bisa harvest).</div>
-    </div>
-    <div class="card"><h2>📝 20 Soal PG (Bab 9)</h2>
-      <div class="soal-box"><strong>1.</strong> Sumber ide dari internal bank: a) crowdsourcing b) tim intrapreneurship. <details><summary>Kunci</summary><div class="answer-content">b (internal).</div></details></div>
-      <div class="soal-box"><strong>2.</strong> Kriteria R-W-W gagal karena tidak ada keunggulan berkelanjutan → kriteria "Can we win?" <details><summary>Kunci</summary><div class="answer-content">Ya.</div></details></div>
-      <!-- lengkap 20 soal -->
-    </div>
-    <div class="card"><h2>📋 5 Esai PLC & Inovasi</h2>
-      <div class="essay-item">Esai 1: Kredit Mikro AI – uji pasar terbatas vs kecepatan pesaing.</div>
-      <div class="essay-item">Esai 2: Dompet digital matang – modifikasi pasar/harvest.</div>
-      <div class="essay-item">Esai 3: Pinjaman instan menurun – revitalisasi vs penghentian.</div>
-      <div class="essay-item">Esai 4: Kartu kredit AI & tanggung jawab etika produk.</div>
-      <div class="essay-item">Esai 5: Ekspansi internasional – standardisasi vs adaptasi produk.</div>
-    </div>
-  </div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">Model STDP</span>
+                        <p>Segmentasi (geografis, demografis, psikografis, perilaku) &rarr; Penargetan (evaluasi kriteria) &rarr; Diferensiasi &rarr; Posisi. Kegagalan di satu tahap meruntuhkan seluruh strategi.</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Spektrum Penargetan</span>
+                        <p>Undifferentiated (massal) &rarr; Differentiated (beberapa produk/segmen) &rarr; Concentrated (ceruk) &rarr; Micromarketing (lokal/individu).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Proposisi Nilai</span>
+                        <p>More for More, More for the Same, The Same for Less, Less for Much Less, More for Less. Hindari posisi jebakan: The Same for More.</p>
+                    </div>
+                </div>
+                <div class="box box-alert">
+                    <strong>⚠️ Jebakan Logika:</strong> Mengacaukan deskripsi segmen dengan justifikasi target. Segmen mungkin substansial tetapi belum tentu *actionable* jika bank tidak memiliki infrastruktur yang memadai.
+                </div>
+            </div>
 
-  <!-- ======================= BAB 10 ======================= -->
-  <div id="bab10" class="tab-content">
-    <div class="card"><h2>💰 Bab 10: Penetapan Harga – Menangkap Nilai</h2>
-      <div class="grid-3">
-        <div class="theory-card"><strong>Value‑based pricing</strong><br>Harga berdasarkan persepsi nilai.</div>
-        <div class="theory-card"><strong>Cost‑based pricing</strong><br>Cost-plus, break-even.</div>
-        <div class="theory-card"><strong>Competition‑based</strong><br>Mengikuti pesaing utama.</div>
-      </div>
-      <div class="app-box">Contoh perbankan: Bank premium value-based (biaya kartu kredit), cost-based untuk biaya transfer, competition-based untuk suku bunga pinjaman.</div>
-    </div>
-    <div class="card"><h2>📝 20 Soal PG (elastisitas, mark-up, target costing)</h2>
-      <div class="soal-box"><strong>1.</strong> Bank NeoDigital bunga 4,5% dengan layanan minim, strategi? a) Good-value pricing b) value-added. <details><summary>Kunci</summary><div class="answer-content">A (good-value).</div></details></div>
-      <div class="soal-box"><strong>2.</strong> Break-even volume = biaya tetap / (harga - biaya variabel) – contoh perhitungan unit.<details><summary>Kunci</summary><div class="answer-content">286 juta unit.</div></details></div>
-      <!-- 18 soal lain mencakup inelastisitas, high-low pricing, predatory pricing, dll -->
-    </div>
-    <div class="card"><h2>✍️ 5 Esai Harga (konflik treasury vs pemasaran)</h2>
-      <div class="essay-item">Esai 1: KPR vs pesaik – value-added vs perang suku bunga.</div>
-      <div class="essay-item">Esai 2: Startup biaya tinggi – kurva pengalaman dan value-based.</div>
-      <div class="essay-item">Esai 3: Bank digital menghadapi kenaikan cost of fund – analisis titik impas.</div>
-    </div>
-  </div>
+            <div class="card" id="bab7-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+                </div>
 
-  <!-- ======================= BAB 12 ======================= -->
-  <div id="bab12" class="tab-content">
-    <div class="card"><h2>📦 Bab 12: Saluran Pemasaran & Value Delivery Network</h2>
-      <div class="grid-3">
-        <div class="theory-card"><strong>Value Delivery Network</strong><br>Delapan fungsi saluran (informasi, promosi, kontak, penyesuaian, negosiasi, distribusi fisik, pembiayaan, risiko).</div>
-        <div class="theory-card"><strong>VMS (Vertikal)</strong><br>Korporat, kontraktual, terkelola.</div>
-        <div class="theory-card"><strong>Multichannel & Disintermediasi</strong><br>Reintermediasi di fintech.</div>
-      </div>
-      <div class="banking">Contoh: Agen BRILink (VMS kontraktual), open banking API, konflik kanal digital vs cabang.</div>
-    </div>
-    <div class="card"><h2>20 Soal PG saluran (distribusi eksklusif, konflik horizontal, 3PL, PRM)</h2>
-      <div class="soal-box"><strong>1.</strong> Bank NeoDigital tanpa cabang, gunakan API → saluran? a) VMS korporat b) langsung dengan mitra. <details><summary>Kunci</summary><div class="answer-content">B (direct channel + mitra strategis).</div></details></div>
-      <div class="soal-box"><strong>2.</strong> Distribusi eksklusif untuk structured notes → a) intensif b) eksklusif. <details><summary>Kunci</summary><div class="answer-content">Eksklusif.</div></details></div>
-    </div>
-    <div class="card"><h2>5 Esai Konflik Saluran & Logistik</h2>
-      <div class="essay-item">Esai 1: Konflik kanal digital vs fisik, dual incentive system.</div>
-      <div class="essay-item">Esai 2: Disintermediasi oleh fintech P2P – membangun platform sendiri atau akuisisi.</div>
-      <div class="essay-item">Esai 3: Menjangkau unbanked di Indonesia Timur – agen branchless vs cabang mikro.</div>
-    </div>
-  </div>
+            <div class="card">
+                <h2>Tahap 3: Esai Kasus Rigid</h2>
+                <div class="essay-block">
+                    <h4>Soal 1: Dilema Penargetan Ulang</h4>
+                    <p>Produk "Kredit Pensiunan" menyumbang 40% portofolio, namun NPL naik dan biaya akuisisi tinggi. Fitur *pre-approved loan* di mobile banking diminati Profesional Muda dengan NPL rendah. Anda harus memutuskan apakah mengalihkan 60% anggaran pemasaran ke profesional muda.</p>
+                    <p class="command">Instruksi: Rancang keputusan dengan kerangka Model Evaluasi Segmen Pasar.</p>
+                </div>
+                <div class="essay-block">
+                    <h4>Soal 2: Perang Proposisi Nilai Fintech</h4>
+                    <p>Fintech menawarkan "Pinjam Tunai 30 Detik" (bunga tinggi tersembunyi). Bank Anda punya "KTA Instan" (3 jam, bunga rendah). Pasar menilai fintech "lebih cepat dan mudah".</p>
+                    <p class="command">Instruksi: Rumuskan strategi diferensiasi tanpa perang harga.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Tahap 4: Rubrik Validasi 'Nilai A'</h2>
+                <details>
+                    <summary>Lihat Kriteria Penilaian</summary>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Soal 1:</strong> Strategi bertahap (phasing) dengan differentiated marketing. Wajib distir: Evaluasi ukuran, daya tarik struktural, sumber daya. Metrik: RAROC.</li>
+                            <li><strong>Soal 2:</strong> Pilih satu sel Value Proposition Grid secara eksplisit (misal More for More: transparan/sehat). Wajib distir: Unique Selling Proposition.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
 
-  <!-- ======================= BAB ANALISIS PESAING ======================= -->
-  <div id="babCompetitor" class="tab-content">
-    <div class="card"><h2>⚔️ Analisis Pesaing & Keunggulan Kompetitif</h2>
-      <div class="grid-3">
-        <div class="theory-card"><strong>Strategi Generik Porter</strong><br>Cost Leadership, Differentiation, Focus.</div>
-        <div class="theory-card"><strong>Value Disciplines (Treacy & Wiersema)</strong><br>Operational Excellence, Customer Intimacy, Product Leadership.</div>
-        <div class="theory-card"><strong>Peran Pasar</strong><br>Market Leader, Challenger, Follower, Nicher.</div>
-      </div>
-      <div class="app-box">Contoh: SeaBank (Cost Leadership), BCA Prioritas (Differentiation), Amartha (Focus / Nicher).</div>
-      <div class="trap-box">⚠️ Jebakan: Competitor Myopia (hanya lihat bank lain, lupa fintech/BigTech), Middle-of-the-Roaders (mencoba semua strategi tanpa fokus).</div>
-    </div>
-    <div class="card"><h2>📝 20 Soal PG Analisis Pesaing</h2>
-      <div class="soal-box"><strong>1.</strong> Bank Delta pangsa turun karena BNPL – fenomena: a) Differentiation gagal b) Competitor Myopia. <details><summary>Kunci</summary><div class="answer-content">Competitor Myopia.</div></details></div>
-      <div class="soal-box"><strong>2.</strong> SeaBank bunga tinggi, biaya nol → Cost Leadership.<details><summary>Kunci</summary><div class="answer-content">Cost leadership.</div></details></div>
-      <div class="soal-box"><strong>3.</strong> TikTok PayLater masuk dengan data behavioral → Second-mover advantage.</div>
-      <div class="soal-box"><strong>4.</strong> Strategic group Indomaret & Alfamart karena kesamaan segmen dan model bisnis.</div>
-    </div>
-    <div class="card"><h2>✍️ 5 Esai Kompetitor (CEO / CSO level)</h2>
-      <div class="essay-item">Esai 1: Bank Nusantara – ubah orientasi dari competitor myopia ke market-centered.</div>
-      <div class="essay-item">Esai 2: Bank Karya & kanibalisasi unit digital – middle-of-the-roader risk.</div>
-      <div class="essay-item">Esai 3: PayPro (market leader) vs QuickPay challenger – strategi defense.</div>
-      <div class="essay-item">Esai 4: Memilih pesaing – bank nasional vs fintech asing (pesaing dekat vs jauh).</div>
-      <div class="essay-item">Esai 5: Transformasi bank daerah dari competitor-centered ke market-centered, pilih value discipline & fokus.</div>
-      <details><summary>🏆 Rubrik Nilai A (Analisis Pesaing)</summary><div class="answer-content">Setiap esai harus berisi: (1) keputusan taktis, (2) teori Porter/Treacy/peran pasar, (3) metrik seperti pangsa pasar, CAC, NPS, competitive response pattern.</div></details>
-    </div>
-  </div>
+        <section id="bab8" class="chapter-section">
+            <div class="header-banner">
+                <h1>Bab 8: Produk, Layanan, dan Merek</h1>
+                <p>Membangun Nilai Pelanggan Melalui Spesialisasi Jasa Keuangan</p>
+            </div>
 
-  <footer>
-    © Ujian Komprehensif Manajemen Pemasaran — Spesialisasi Jasa Keuangan & Fintech. Semua soal dan rubrik mengacu pada prinsip STDP, Porter, Treacy & Wiersema, serta siklus hidup produk dan saluran pemasaran.
-  </footer>
-</div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">Tiga Tingkat Produk</span>
+                        <p>Nilai Inti (manfaat fundamental), Produk Aktual (fitur, aplikasi, merek), Produk Tambahan (CS, asuransi).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Karakteristik Jasa (IHIP)</span>
+                        <p>Intangibility (tak berwujud), Heterogeneity (variabilitas kualitas), Inseparability (produksi/konsumsi bersamaan), Perishability (tak bisa disimpan).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Service Profit Chain</span>
+                        <p>Kualitas layanan internal &rarr; Karyawan puas &rarr; Nilai layanan besar &rarr; Pelanggan loyal &rarr; Pertumbuhan laba.</p>
+                    </div>
+                </div>
+            </div>
 
-<script>
-  // TAB SWITCHING
-  const tabs = document.querySelectorAll('.tab-btn');
-  const contents = document.querySelectorAll('.tab-content');
-  tabs.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tabId = btn.getAttribute('data-tab');
-      // remove active class from all
-      tabs.forEach(b => b.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    });
-  });
-</script>
+            <div class="card" id="bab8-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+            </div>
+
+            <div class="card">
+                <h2>Tahap 3: Esai Kasus Rigid</h2>
+                <div class="essay-block">
+                    <h4>Soal 1: Krisis Kepercayaan Mobile Banking</h4>
+                    <p>Bank "NusaDamai" mengalami kebocoran data. Direktur Utama meminta strategi pemulihan.</p>
+                    <p class="command">Instruksi: Gunakan kerangka Service Recovery & Brand Equity, serta IHIP.</p>
+                </div>
+                <div class="essay-block">
+                    <h4>Soal 2: Dilema Perluasan Merek</h4>
+                    <p>Bank "ElitePrime" (segmen affluent) ingin meluncurkan "Tabungan ElitKu" (setoran Rp 50.000) untuk segmen mikro.</p>
+                    <p class="command">Instruksi: Analisis kelayakan menggunakan Brand Positioning & Brand Extension.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Tahap 4: Rubrik Validasi 'Nilai A'</h2>
+                <details>
+                    <summary>Lihat Kriteria Penilaian</summary>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Soal 1:</strong> Service recovery 3 komponen (maaf publik, transparan, kompensasi). Wajib distir: IHIP (Intangibility) & Brand Equity.</li>
+                            <li><strong>Soal 2:</strong> Keputusan MUTLAK: TIDAK menggunakan merek utama. Gunakan sub-brand atau akuisisi untuk mencegah kanibalisasi citra premium.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section id="bab9" class="chapter-section">
+            <div class="header-banner">
+                <h1>Bab 9: Pengembangan Produk Baru & PLC</h1>
+                <p>Strategi Siklus Hidup Produk di Perbankan & Fintech</p>
+            </div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">R-W-W Screening</span>
+                        <p>Real, Win, Worth. Validasi apakah ide fitur bank nyata menyelesaikan masalah, bisa menang dari pesaing, dan layak secara ROI.</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Stage-Gate</span>
+                        <p>Delapan tahap pengembangan. Dipercepat dengan tim lintas fungsi (kepatuhan, IT, marketing).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Siklus Hidup (PLC)</span>
+                        <p>Perkenalan (edukasi), Pertumbuhan (akuisisi), Kematangan (modifikasi/bundling), Penurunan (harvest/migrasi).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="bab9-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+            </div>
+        </section>
+
+        <section id="bab10" class="chapter-section">
+            <div class="header-banner">
+                <h1>Bab 10: Penetapan Harga</h1>
+                <p>Memahami & Menangkap Nilai Pelanggan</p>
+            </div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">Value-Based</span>
+                        <p>Harga berdasar persepsi pembeli. (Misal: Kartu kredit premium dengan biaya tahunan tinggi karena akses lounge).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Cost-Based</span>
+                        <p>Biaya produksi + margin. (Misal: Biaya transfer antar bank berdasar biaya infrastruktur TI + margin 10%).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Competition-Based</span>
+                        <p>Mengikuti pesaing. (Misal: P2P lending men-set bunga 0,5% di bawah bank konvensional).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="bab10-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+            </div>
+        </section>
+
+        <section id="bab12" class="chapter-section">
+            <div class="header-banner">
+                <h1>Bab 12: Saluran Pemasaran</h1>
+                <p>Memberikan Nilai melalui Distribusi Ekosistem Finansial</p>
+            </div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">Value Delivery Network</span>
+                        <p>Integrasi pemasok, distributor, pelanggan. 8 Fungsi: informasi, promosi, kontak, penyesuaian, negosiasi, distribusi fisik, pembiayaan, risiko.</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">VMS (Vertical Marketing)</span>
+                        <p>Korporat (kepemilikan tunggal spt Bank+Sekuritas), Kontraktual (Agen BRILink), Terkelola (Dominasi GoPay di merchant).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Disintermediasi</span>
+                        <p>Menghilangkan perantara. Waspada jebakan: Fungsi tidak hilang, hanya pelakunya berubah (reintermediation oleh fintech).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="bab12-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+            </div>
+        </section>
+
+        <section id="pesaing" class="chapter-section">
+            <div class="header-banner">
+                <h1>Analisis Pesaing & Keunggulan Kompetitif</h1>
+                <p>Memenangkan Pertarungan di Ekosistem Jasa Keuangan Digital</p>
+            </div>
+            <div class="card">
+                <h2>Tahap 1: Bedah Konsep</h2>
+                <div class="grid-3">
+                    <div class="box">
+                        <span class="badge">Strategi Generik Porter</span>
+                        <p>Cost Leadership (Bank Digital bunga tinggi/admin nol), Differentiation (Private Banking), Focus (BTPN Syariah ultra-mikro).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Value Disciplines</span>
+                        <p>Operational Excellence (Flip, transfer cepat), Customer Intimacy (Bibit, robo-advisor personal), Product Leadership (OVO, inovasi fitur terus menerus).</p>
+                    </div>
+                    <div class="box">
+                        <span class="badge">Posisi Pasar</span>
+                        <p>Leader (BCA), Challenger (SeaBank, serang via bunga), Nicher (Amartha, perempuan desa).</p>
+                    </div>
+                </div>
+                <div class="box box-alert">
+                    <strong>⚠️ Competitor Myopia:</strong> Mengira pesaing bank hanya bank lain, buta terhadap ancaman Big Tech/Fintech BNPL (ShopeePay, Akulaku) yang mendisrupsi via open banking.
+                </div>
+            </div>
+            <div class="card" id="pesaing-mcq">
+                <h2>Tahap 2: Pilihan Ganda Analitis</h2>
+            </div>
+            <div class="card">
+                <h2>Tahap 3: Esai Kasus Rigid</h2>
+                <div class="essay-block">
+                    <h4>Soal: Dilema Kanibalisasi Digital</h4>
+                    <p>Bank Karya meluncurkan unit digital. Ternyata 40% nasabah baru adalah nasabah bank reguler mereka sendiri yang pindah demi bebas biaya.</p>
+                    <p class="command">Instruksi: Analisis menggunakan konsep Middle-of-the-Roaders dan Strategic Group.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Database Singkat MCQ (Format padat untuk efisiensi)
+        const mcqData = {
+            bab7: [
+                {q: "Fintech 'PayLater' menawarkan cicilan untuk mahasiswa, profesional, dan informal di satu aplikasi. Strategi ini...", opts: ["A. Undifferentiated", "B. Concentrated", "C. Differentiated", "D. Local"], a: "C. Differentiated - Beberapa produk untuk beberapa segmen dalam satu platform." },
+                {q: "Bank BUMN klaim 'Satu-satunya KPR dengan asuransi jiwa gratis'. Strategi posisi ini disebut...", opts: ["A. More for More", "B. More for the Same", "C. The Same for Less", "D. Less for Much Less"], a: "B. More for the Same - Menambah manfaat asuransi dengan harga bunga setara kompetitor." }
+            ],
+            bab8: [
+                {q: "Fitur 'Face ID' pada aplikasi m-banking termasuk tingkat produk...", opts: ["A. Nilai Inti", "B. Produk Aktual", "C. Produk Tambahan", "D. Manfaat"], a: "B. Produk Aktual - Atribut nyata yang membungkus nilai inti (keamanan)." },
+                {q: "Keluhan nasabah bank mayoritas karena staf cabang kurang ramah. Rantai masalahnya ada pada...", opts: ["A. Kualitas Layanan Internal", "B. Nilai Pelanggan", "C. Laba", "D. Inseparability"], a: "A. Kualitas Layanan Internal - Akar dari Service Profit Chain (Pelatihan SDM)." }
+            ],
+            bab9: [
+                {q: "Bank menguji kartu ramah lingkungan di 3 kota selama 4 bulan. Ini adalah...", opts: ["A. Concept Testing", "B. Test Marketing", "C. Komersialisasi", "D. R-W-W"], a: "B. Test Marketing - Diuji di lingkungan realistis sebelum peluncuran nasional." }
+            ],
+            bab10: [
+                {q: "Fintech mematok tarif transfer Rp0, berharap laba dari layanan analytics premium. Konsep ini mirip...", opts: ["A. Value-based", "B. Break-even", "C. Pendapatan di luar layanan inti (Ryanair model)", "D. Cost-plus"], a: "C. Menggratiskan produk dasar, monetisasi fitur tambahan." }
+            ],
+            bab12: [
+                {q: "BRI memiliki 41.000 agen BRILink independen. Struktur ini termasuk...", opts: ["A. VMS Korporat", "B. VMS Kontraktual", "C. VMS Terkelola", "D. Disintermediasi"], a: "B. VMS Kontraktual - Agen terikat kontrak (mirip waralaba)." }
+            ],
+            pesaing: [
+                {q: "SeaBank menawarkan bunga tabungan tinggi dan nol biaya admin karena infrastruktur cloud. Ini strategi...", opts: ["A. Differentiation", "B. Focus", "C. Cost Leadership", "D. Customer Intimacy"], a: "C. Cost Leadership - Menekan biaya operasional untuk memberikan harga terbaik di pasar." },
+                {q: "Bank Delta hanya pantau suku bunga bank lain, lalu kecolongan pangsa pasar oleh Paylater. Ini disebut...", opts: ["A. Differentiation failure", "B. Competitor Myopia", "C. Focus Strategy", "D. Market Challenger"], a: "B. Competitor Myopia - Rabun jauh melihat pesaing, abai pada substitusi non-bank." }
+            ]
+        };
+
+        // Render MCQ otomatis untuk menghemat penulisan HTML
+        function renderMCQ(chapterId, containerId) {
+            const container = document.getElementById(containerId);
+            if(!container || !mcqData[chapterId]) return;
+            
+            let html = '';
+            mcqData[chapterId].forEach((item, index) => {
+                html += `
+                <div class="q-block">
+                    <p>${index + 1}. ${item.q}</p>
+                    <div class="opts">
+                        ${item.opts.map(opt => `<div>${opt}</div>`).join('')}
+                    </div>
+                    <details>
+                        <summary>Lihat Kunci Jawaban</summary>
+                        <div class="answer"><strong>Jawaban:</strong> ${item.a}</div>
+                    </details>
+                </div>`;
+            });
+            container.innerHTML += html;
+        }
+
+        // Initialize content
+        window.onload = () => {
+            renderMCQ('bab7', 'bab7-mcq');
+            renderMCQ('bab8', 'bab8-mcq');
+            renderMCQ('bab9', 'bab9-mcq');
+            renderMCQ('bab10', 'bab10-mcq');
+            renderMCQ('bab12', 'bab12-mcq');
+            renderMCQ('pesaing', 'pesaing-mcq');
+        };
+
+        // Tab Switching Logic
+        function showTab(tabId, btnElement) {
+            // Sembunyikan semua section
+            document.querySelectorAll('.chapter-section').forEach(sec => sec.classList.remove('active'));
+            // Tampilkan yang dipilih
+            document.getElementById(tabId).classList.add('active');
+            
+            // Ubah state button
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Scroll ke atas dengan halus
+            document.querySelector('.main-content').scrollTop = 0;
+
+            // Tutup menu di mobile setelah klik
+            if(window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
