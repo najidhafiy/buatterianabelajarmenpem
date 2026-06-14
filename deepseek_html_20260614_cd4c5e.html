@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>Ujian Komprehensif: Penetapan Harga di Jasa Keuangan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, sans-serif;
+    }
+    body {
+      background: #f4f6f9;
+      padding: 2.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem 1.8rem;
+      box-shadow: 0 10px 25px -8px rgba(0, 51, 102, 0.12);
+      border: 1px solid #e9edf4;
+      transition: all 0.2s ease;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #003366;
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.3px;
+      border-bottom: 3px solid #e0e6ef;
+      padding-bottom: 0.55rem;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #1a2b4c;
+      margin: 1.5rem 0 0.9rem;
+    }
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .framework-item {
+      background: #f8fafd;
+      border-left: 5px solid #003366;
+      padding: 1.2rem 1.2rem 1rem;
+      border-radius: 0.9rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #003366;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.9rem;
+      border-radius: 20px;
+      letter-spacing: 0.4px;
+      margin-bottom: 0.7rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+      margin: 0.8rem 0;
+    }
+    li {
+      margin: 0.45rem 0;
+      line-height: 1.5;
+    }
+    .question-box {
+      background: #fafbfc;
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      margin: 1.2rem 0;
+      border: 1px solid #e2e8f0;
+    }
+    details {
+      margin-top: 1rem;
+      background: #f0f3f8;
+      padding: 0.7rem 1.2rem;
+      border-radius: 0.75rem;
+      border: 1px solid #dce2ec;
+      cursor: pointer;
+    }
+    summary {
+      font-weight: 700;
+      color: #003366;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    summary::before {
+      content: "🔒";
+      font-size: 1rem;
+    }
+    details[open] summary::before {
+      content: "🔓";
+    }
+    .key {
+      background: #e6f0ff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.4rem;
+      font-weight: 600;
+      color: #00264d;
+    }
+    .essay-prompt {
+      background: #ffffff;
+      border: 1px solid #cfddee;
+      border-radius: 1rem;
+      padding: 1.4rem;
+      margin: 1.5rem 0;
+    }
+    hr {
+      border: 0.5px solid #dfe6f0;
+      margin: 1.8rem 0 1rem;
+    }
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- TAHAP 1: BEDAH KONSEP SPESIALISASI JASA KEUANGAN -->
+  <div class="card">
+    <h2>📘 Tahap 1: Bedah Konsep – Spesialisasi Jasa Keuangan</h2>
+    <p style="margin-bottom:0.8rem; color:#2c3e50;"><span class="badge">Bab 10</span> Penetapan Harga: Memahami & Menangkap Nilai Pelanggan</p>
+
+    <h3>🧩 3 Kerangka Utama</h3>
+    <div class="framework-grid">
+      <div class="framework-item">
+        <span class="badge">1</span> <strong>Penetapan Harga Berbasis Nilai Pelanggan (Customer Value-Based Pricing)</strong>
+        <p style="margin-top:0.4rem;">Harga ditentukan oleh persepsi nilai pembeli, bukan biaya internal. Dimulai dengan memahami kebutuhan nasabah, menetapkan harga target berdasarkan nilai yang dirasakan, lalu merancang biaya.</p>
+      </div>
+      <div class="framework-item">
+        <span class="badge">2</span> <strong>Penetapan Harga Berbasis Biaya (Cost-Based Pricing)</strong>
+        <p style="margin-top:0.4rem;">Menggunakan biaya produksi, distribusi, dan penjualan ditambah margin wajar. Termasuk <em>cost-plus pricing</em> dan analisis titik impas (<em>break-even</em>).</p>
+      </div>
+      <div class="framework-item">
+        <span class="badge">3</span> <strong>Penetapan Harga Berbasis Persaingan (Competition-Based Pricing)</strong>
+        <p style="margin-top:0.4rem;">Harga ditetapkan mengikuti strategi, biaya, dan penawaran pesaing. Sangat relevan di pasar oligopoli atau ketika diferensiasi produk rendah.</p>
+      </div>
+    </div>
+
+    <h3>🏦 Aplikasi di Perbankan & Fintech</h3>
+    <ul>
+      <li><strong>Value-Based →</strong> Bank premium menetapkan biaya tahunan kartu kredit tinggi berdasarkan akses airport lounge & asuransi perjalanan yang dipersepsikan bernilai tinggi oleh segmen affluent.</li>
+      <li><strong>Cost-Based →</strong> Bank digital menetapkan biaya transfer antar bank menggunakan perhitungan biaya infrastruktur TI, SWIFT, dan biaya likuiditas ditambah margin 8-12%.</li>
+      <li><strong>Competition-Based →</strong> Fintech peer-to-peer lending menetapkan suku bunga pinjaman 0,5% di bawah bank konvensional untuk menarik pengguna, mengikuti pergerakan harga kompetitor.</li>
+    </ul>
+
+    <h3>⚠️ 2 Jebakan Logika (Kesalahan Konseptual)</h3>
+    <ol>
+      <li><strong>“Cost-plus selalu aman”</strong> → Banyak mahasiswa mengira menambahkan markup pada biaya sudah cukup. Di sektor keuangan, ini mengabaikan elastisitas permintaan dan persepsi nilai. Misalnya, biaya admin tinggi bisa membuat nasabah beralih ke fintech meskipun bank sudah menghitung biaya dengan benar.</li>
+      <li><strong>“Harga rendah pasti memenangkan persaingan”</strong> → Terjebak pada asumsi bahwa nasabah hanya sensitif terhadap harga. Dalam produk keuangan, kepercayaan, kemudahan akses, dan reputasi seringkali lebih bernilai daripada selisih biaya 0,25%.</li>
+    </ol>
+  </div>
+
+  <!-- TAHAP 2: 20 SOAL PILIHAN GANDA -->
+  <div class="card">
+    <h2>📝 Tahap 2: 20 Soal Pilihan Ganda – Studi Kasus Mini</h2>
+    <p style="color:#2c3e50; margin-bottom:1rem;"><span class="badge">Analitis</span> Skenario perbankan & fintech</p>
+    <div id="pgQuestions"></div>
+  </div>
+
+  <!-- TAHAP 3: 5 SOAL ESAI KASUS RIGID -->
+  <div class="card">
+    <h2>⚖️ Tahap 3: 5 Soal Esai – Konflik Manajerial Bank/Finttech</h2>
+    <div id="essayQuestions"></div>
+  </div>
+
+  <!-- TAHAP 4: RUBRIK VALIDASI NILAI A -->
+  <div class="card">
+    <h2>🏅 Tahap 4: Rubrik Validasi 'Nilai A'</h2>
+    <details>
+      <summary>Buka Rubrik Penilaian Esai</summary>
+      <div id="rubrikContent" style="margin-top:1.2rem;"></div>
+    </details>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  // ==================== DATA SOAL PG ====================
+  const pgData = [
+    {
+      q: "Bank NeoDigital meluncurkan tabungan dengan bunga 4,5% p.a., jauh di atas rata-rata pasar 3%. Namun mereka memangkas layanan call center dan hanya menyediakan chat bot. Strategi penetapan harga apakah ini?",
+      opts: ["A. Cost-plus pricing", "B. Good-value pricing", "C. Value-added pricing", "D. Competition-based pricing"],
+      ans: "B. Good-value pricing — memadukan kualitas layanan yang lebih rendah dengan harga (bunga) yang sangat menarik bagi nasabah, persis konsep 'more for less'.",
+    },
+    {
+      q: "Fintech Bayarin menetapkan biaya admin 0,5% per transaksi, lebih rendah dari bank besar yang mematok 1%. Mereka mengikuti harga pesaing terdekat dan menyesuaikan setiap bulan. Ini contoh?",
+      opts: ["A. Value-based pricing", "B. Cost-based pricing", "C. Competition-based pricing", "D. Break-even pricing"],
+      ans: "C. Competition-based pricing — harga ditentukan berdasarkan strategi dan harga pesaing, khas di pasar oligopoli.",
+    },
+    {
+      q: "Bank Artha menetapkan suku bunga KPR dengan menghitung cost of fund 5%, biaya operasional 2%, risiko kredit 1,5%, dan margin laba 2%. Harga jual menjadi 10,5%. Pendekatan ini:",
+      opts: ["A. Customer value-based", "B. Markup pricing", "C. Target costing", "D. Good-value pricing"],
+      ans: "B. Markup pricing — menambahkan margin standar pada total biaya, sesuai definisi cost-plus.",
+    },
+    {
+      q: "Sebelum meluncurkan kartu kredit titanium, Bank Prestige menyurvei 500 nasabah prioritas untuk mengetahui harga maksimum yang bersedia dibayar untuk paket asuransi + lounge. Ini langkah awal?",
+      opts: ["A. Analisis titik impas", "B. Penetapan harga berbasis nilai pelanggan", "C. Penetapan harga kompetitif", "D. Kurva pengalaman"],
+      ans: "B. Penetapan harga berbasis nilai pelanggan — perusahaan menilai persepsi nilai konsumen sebelum menentukan harga.",
+    },
+    {
+      q: "Startup KreditCepat menggunakan machine learning untuk menurunkan biaya underwriting per pinjaman dari Rp50.000 menjadi Rp8.000. Mereka memutuskan menurunkan suku bunga untuk memperbesar volume. Konsep biaya apakah yang mendasari?",
+      opts: ["A. Biaya tetap", "B. Biaya variabel", "C. Kurva pengalaman", "D. Biaya total"],
+      ans: "C. Kurva pengalaman — biaya rata-rata turun seiring akumulasi pengalaman dan volume produksi.",
+    },
+    {
+      q: "Produk reksa dana Syariah berbiaya rendah Bank Mumtaz memiliki total biaya tetap Rp2 miliar/tahun, biaya variabel 0,1% per unit, harga jual 0,8% per unit. Berapa unit agar impas? (biaya variabel dalam rupiah dianggap kecil)",
+      opts: ["A. 250 juta unit", "B. 285,7 juta unit", "C. 200 juta unit", "D. 333 juta unit"],
+      ans: "B. 285,7 juta unit — Volume impas = biaya tetap / (harga - biaya variabel) = 2M / (0,8%-0,1%) = 2M/0,007 = ~285,7 juta unit.",
+    },
+    {
+      q: "Bank Delta menaikkan biaya bulanan rekening dari Rp10.000 menjadi Rp12.500, dan jumlah nasabah turun hanya 3%. Permintaan tergolong?",
+      opts: ["A. Elastis", "B. Inelastis", "C. Unitary elastic", "D. Tidak dapat ditentukan"],
+      ans: "B. Inelastis — perubahan harga 25% hanya menurunkan permintaan 3% (elastisitas -0,12), permintaan tidak sensitif.",
+    },
+    {
+      q: "Layanan paylater Bank Fleksibel menerapkan harga tinggi-rendah: sering memberikan diskon 0% cicilan selama promo. Strategi ritel ini disebut?",
+      opts: ["A. EDLP", "B. High-low pricing", "C. Value-added pricing", "D. Target profit pricing"],
+      ans: "B. High-low pricing — harga rutin lebih tinggi tetapi sering dipromosikan dengan diskon sementara.",
+    },
+    {
+      q: "Bank Sentosa menetapkan biaya transaksi QRIS nol rupiah untuk pedagang kecil, sementara pesaing mengenakan 0,3%. Tujuannya mengunci pangsa pasar. Risiko utama strategi ini?",
+      opts: ["A. Margin terlalu tinggi", "B. Perang harga dan degradasi nilai", "C. Kurva pengalaman menurun", "D. Biaya tetap membengkak"],
+      ans: "B. Perang harga dan degradasi nilai — pemotongan harga agresif dapat memicu perang harga dan mengikis persepsi kualitas.",
+    },
+    {
+      q: "Tim produk Bank Inovatif menggunakan target costing untuk tabungan rencana. Mereka menetapkan harga jual yield 4% dulu, baru menyesuaikan biaya akuisisi dan operasional. Urutan ini dimulai dari?",
+      opts: ["A. Biaya produksi", "B. Harga ideal berdasarkan nilai nasabah", "C. Harga pesaing", "D. Target laba"],
+      ans: "B. Harga ideal berdasarkan nilai nasabah — target costing berawal dari harga jual yang diinginkan konsumen, lalu menyesuaikan biaya.",
+    },
+    {
+      q: "Ketika suku bunga acuan naik, Bank Makmur memilih mempertahankan suku bunga kredit dan malah menambah fitur konsultasi keuangan gratis. Ini adalah?",
+      opts: ["A. Good-value pricing", "B. Value-added pricing", "C. Markup pricing", "D. Break-even pricing"],
+      ans: "B. Value-added pricing — menambahkan fitur bernilai tambah untuk membenarkan harga lebih tinggi, bukan memotong harga.",
+    },
+    {
+      q: "Aplikasi NeoWallet menawarkan suku bunga tabungan 5% untuk saldo di bawah Rp5 juta, tetapi 0% untuk saldo di atasnya. Strategi ini mencerminkan?",
+      opts: ["A. Penetapan harga berbasis persaingan", "B. Penetapan harga segmented", "C. Penetapan harga dinamis", "D. B dan C benar"],
+      ans: "D. B dan C benar — harga berbeda per segmen saldo (segmented) dan dapat berubah sesuai perilaku (dinamis).",
+    },
+    {
+      q: "Bank Rakyat mengeluarkan biaya tetap tinggi untuk platform digital, lalu membebankan biaya layanan yang sangat rendah per transaksi. Mereka mengandalkan volume besar. Ini memanfaatkan?",
+      opts: ["A. Economies of scale", "B. Kurva permintaan inelastis", "C. Harga psikologis", "D. Markup rendah"],
+      ans: "A. Economies of scale — biaya tetap tersebar ke banyak transaksi sehingga biaya rata-rata turun drastis.",
+    },
+    {
+      q: "Manajemen Bank Global menghitung elastisitas harga permintaan kredit mikro sebesar -0,4. Apa interpretasi tepat?",
+      opts: ["A. Permintaan elastis, turunkan harga", "B. Permintaan inelastis, naikkan harga dapat menaikkan pendapatan", "C. Harga tidak boleh diubah", "D. Permintaan sangat sensitif"],
+      ans: "B. Permintaan inelastis — kenaikan harga 10% hanya menurunkan volume 4%, sehingga total pendapatan naik.",
+    },
+    {
+      q: "Bank Syariah menerbitkan obligasi hijau dengan imbal hasil 6%, sedikit di bawah obligasi konvensional 6,5%, namun laris karena nilai keberlanjutan. Ini contoh?",
+      opts: ["A. Cost-based pricing", "B. Competition-based pricing", "C. Value-based pricing", "D. Break-even pricing"],
+      ans: "C. Value-based pricing — investor bersedia menerima yield lebih rendah karena persepsi nilai etis yang tinggi.",
+    },
+    {
+      q: "Bank Digital menetapkan biaya Rp0 untuk semua transfer, berharap pendapatan berasal dari fitur premium dan data analytics. Filosofi ini mirip dengan?",
+      opts: ["A. Ryanair: memotong harga pokok", "B. Trader Joe's: good-value", "C. Ryanair: pendapatan tambahan di luar tiket", "D. Steinway: harga prestise"],
+      ans: "C. Ryanair: pendapatan tambahan di luar tiket — harga dasar sangat rendah (bahkan nol) dan laba dari layanan tambahan.",
+    },
+    {
+      q: "Bank Konvensional menetapkan biaya provisi kredit 1% dari plafon, sementara fintech hanya 0,5%. Bank tidak menurunkan harga, tetapi meningkatkan kecepatan approval dan relationship manager. Ini adalah:",
+      opts: ["A. Good-value pricing", "B. Value-added pricing", "C. Markup pricing", "D. Penetapan harga kompetitif"],
+      ans: "B. Value-added pricing — diferensiasi melalui layanan bernilai tambah untuk mempertahankan harga premium.",
+    },
+    {
+      q: "Bank XYZ memiliki biaya tetap Rp10 miliar, biaya variabel 2% per pinjaman, harga 5% per pinjaman. Target laba Rp2 miliar. Berapa volume pinjaman yang harus disalurkan?",
+      opts: ["A. Rp200 miliar", "B. Rp300 miliar", "C. Rp400 miliar", "D. Rp240 miliar"],
+      ans: "C. Rp400 miliar — (biaya tetap + target laba) / (harga - biaya variabel) = (10+2)M / (5%-2%) = 12M/0.03 = Rp400 miliar.",
+    },
+    {
+      q: "Sebuah bank asing memasuki pasar Indonesia dan menetapkan harga sedikit di bawah Bank Mandiri dan BCA untuk kredit korporasi. Kemungkinan besar mereka menggunakan?",
+      opts: ["A. Penetapan harga berbasis nilai", "B. Penetapan harga going-rate", "C. Penetapan harga markup", "D. Target profit pricing"],
+      ans: "B. Penetapan harga going-rate — mendasarkan harga pada harga pasar yang berlaku, sedikit di bawah pesaing utama.",
+    },
+    {
+      q: "Regulator mewajibkan tarif maksimum bunga pinjaman online 0,4% per hari. Platform LenteraUang yang sebelumnya mematok 0,8% harus mengubah model bisnis. Faktor eksternal apakah ini?",
+      opts: ["A. Kondisi ekonomi", "B. Persaingan", "C. Lingkungan politik-regulasi", "D. Elastisitas permintaan"],
+      ans: "C. Lingkungan politik-regulasi — pemerintah menetapkan batas harga yang memengaruhi keputusan penetapan harga.",
+    }
+  ];
+
+  // ==================== DATA SOAL ESAI ====================
+  const essayData = [
+    {
+      id: 1,
+      prompt: "Bank Nusantara memiliki produk KPR dengan suku bunga 8,5% (fixed 3 tahun). Pesaing utama menurunkan suku bunga menjadi 7,9% dan mulai menggerus pangsa pasar. Hasil riset menunjukkan nasabah Nusantara bersedia membayar premi 0,4% jika mendapatkan layanan konsultasi properti dan asuransi jiwa gratis. Namun manajemen keuangan bersikeras memangkas suku bunga langsung menjadi 7,8% untuk menyamai pesaing. Anda sebagai VP Marketing dihadapkan pada konflik ini. Rumuskan keputusan manajerial dengan justifikasi dari Bab 10.",
+    },
+    {
+      id: 2,
+      prompt: "Startup fintech 'CepatDana' menyalurkan pinjaman mikro dengan biaya operasional tinggi karena underwriting manual. Mereka menerapkan cost-plus pricing sehingga suku bunga mencapai 18% per bulan, sementara pesaing besar mengenakan 12%. CEO ingin tetap pada harga saat ini karena margin per unit tinggi, namun akuisisi nasabah stagnan. Berdasarkan kurva pengalaman dan value-based pricing, berikan rekomendasi strategis Anda.",
+    },
+    {
+      id: 3,
+      prompt: "Bank Digital 'e-Save' menawarkan tabungan dengan suku bunga 5% p.a. tanpa biaya administrasi. Setahun berjalan, biaya dana (cost of fund) naik menjadi 5,8% karena kenaikan suku bunga acuan. Divisi treasury mengusulkan menaikkan suku bunga kredit, sementara divisi pemasaran ingin mempertahankan harga untuk loyalitas nasabah. Dengan menggunakan analisis titik impas dan elastisitas, susun keputusan terintegrasi.",
+    },
+    {
+      id: 4,
+      prompt: "Bank Prestise meluncurkan wealth management dengan biaya AUM 1,5% per tahun, sementara rata-rata industri 0,8%. Mereka menyertakan akses ke private equity dan keluarga wealth planning eksklusif. Namun segmen menengah-atas mulai mengeluh di media sosial bahwa harga tidak sebanding. Anda diminta merancang ulang strategi penetapan harga tanpa merusak positioning premium. Gunakan kerangka value-added pricing dan good-value pricing secara bersamaan.",
+    },
+    {
+      id: 5,
+      prompt: "Platform pembayaran 'QuickPay' menghadapi perang harga dengan tiga kompetitor yang menggratiskan biaya transaksi untuk merchant. QuickPay masih membebankan 0,2% per transaksi. Data internal menunjukkan bahwa merchant yang bertahan sangat menghargai fitur laporan keuangan dan integrasi POS. Namun pressure dari investor untuk mempertahankan revenue stream sangat tinggi. Formulasikan keputusan penetapan harga yang mempertimbangkan faktor persaingan, nilai pelanggan, dan lingkungan ekonomi digital.",
+    }
+  ];
+
+  // ==================== RUBRIK ESAI ====================
+  const rubrikData = [
+    {
+      id: 1,
+      items: [
+        "Keputusan strategis mutlak: Memilih value-added pricing, yaitu mempertahankan suku bunga 8,5% dengan memperkuat bundling konsultasi properti dan asuransi, alih-alih perang harga.",
+        "Teori wajib yang harus distir: Penetapan harga berbasis nilai pelanggan (customer value-based pricing) dan persepsi nilai pembeli sebagai batas atas harga (Gambar 10.1).",
+        "Metrik/Risiko bisnis: Customer lifetime value (CLV), customer retention rate, dan risiko margin bunga bersih (NIM) tergerus jika ikut menurunkan suku bunga tanpa peningkatan volume signifikan."
+      ]
+    },
+    {
+      id: 2,
+      items: [
+        "Keputusan strategis mutlak: Beralih ke penetapan harga berbasis nilai + kurva pengalaman, menurunkan suku bunga secara bertahap seiring efisiensi underwriting digital, bukan mematok margin tinggi.",
+        "Teori wajib: Kurva pengalaman (experience curve) dan hubungan biaya-volume; penetapan harga berbasis nilai yang dimulai dari persepsi nasabah terhadap keterjangkauan.",
+        "Metrik/Risiko: Biaya akuisisi nasabah (CAC), rasio kredit bermasalah (NPL), dan kecepatan adopsi teknologi underwriting otomatis; risiko kerugian jika harga turun sebelum biaya turun."
+      ]
+    },
+    {
+      id: 3,
+      items: [
+        "Keputusan strategis mutlak: Menaikkan suku bunga kredit secara selektif untuk segmen berisiko tinggi, sementara mempertahankan suku bunga tabungan premium untuk segmen loyal sebagai strategi two-tier value.",
+        "Teori wajib: Analisis titik impas (break-even analysis) dan elastisitas permintaan; faktor internal (biaya dana) dan eksternal (suku bunga acuan).",
+        "Metrik/Risiko: Net interest margin (NIM), loan-to-deposit ratio (LDR), dan risiko prepayment atau pelunasan dipercepat jika kredit naik terlalu tinggi."
+      ]
+    },
+    {
+      id: 4,
+      items: [
+        "Keputusan strategis mutlak: Menciptakan tiered pricing: mempertahankan paket premium 1,5% dengan private equity, dan meluncurkan paket 'Good-value' 0,9% dengan fitur esensial wealth planning tanpa akses eksklusif.",
+        "Teori wajib: Good-value pricing (kombinasi tepat kualitas dan harga) dan value-added pricing (diferensiasi fitur untuk mendukung harga lebih tinggi).",
+        "Metrik/Risiko: Assets under management (AUM) growth, tingkat churn segmen menengah-atas, dan risiko kanibalisasi produk premium oleh paket lebih murah."
+      ]
+    },
+    {
+      id: 5,
+      items: [
+        "Keputusan strategis mutlak: Mempertahankan biaya 0,2% untuk merchant yang menginginkan fitur lanjutan (laporan, POS), sementara meluncurkan paket gratis dengan fitur dasar untuk menarik volume, mirip model freemium.",
+        "Teori wajib: Penetapan harga berbasis persaingan (competition-based pricing), persepsi nilai, dan faktor eksternal (tekanan investor, regulasi, kondisi ekonomi digital).",
+        "Metrik/Risiko: Gross merchandise value (GMV), retention rate merchant premium, dan risiko penurunan pendapatan jangka pendek yang harus diimbangi dengan monetisasi data atau layanan nilai tambah."
+      ]
+    }
+  ];
+
+  // ==================== RENDER FUNCTIONS ====================
+  function renderPG() {
+    const container = document.getElementById('pgQuestions');
+    let html = '';
+    pgData.forEach((item, idx) => {
+      html += `<div class="question-box"><strong>Soal ${idx+1}:</strong> ${item.q}<br>`;
+      item.opts.forEach(opt => { html += `${opt}<br>`; });
+      html += `<details><summary>Lihat Kunci Jawaban</summary><span class="key">✅ ${item.ans}</span></details></div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function renderEssay() {
+    const container = document.getElementById('essayQuestions');
+    let html = '';
+    essayData.forEach((item) => {
+      html += `<div class="essay-prompt"><strong>Esai #${item.id}:</strong> ${item.prompt}<br><em style="color:#003366;">👉 Rumuskan keputusan manajerial Anda dengan justifikasi konsep dari Bab 10.</em></div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function renderRubrik() {
+    const container = document.getElementById('rubrikContent');
+    let html = '';
+    rubrikData.forEach((item) => {
+      html += `<div style="margin-bottom:1.8rem;"><strong>📋 Esai #${item.id}</strong><ul>`;
+      item.items.forEach(point => { html += `<li>${point}</li>`; });
+      html += `</ul></div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  // Panggil render
+  renderPG();
+  renderEssay();
+  renderRubrik();
+})();
+</script>
+
+</body>
+</html>

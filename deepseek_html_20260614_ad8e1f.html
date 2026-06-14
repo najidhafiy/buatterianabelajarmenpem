@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Komprehensif - Bab 8: Produk, Layanan, dan Merek | Manajemen Pemasaran</title>
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #14233f;
+            --gold: #b8973c;
+            --gray-light: #e9ecf2;
+            --gray-mid: #c5cad4;
+            --white: #ffffff;
+            --card-shadow: 0 3px 14px rgba(10, 22, 40, .1);
+            --radius: 10px;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f4f6fa;
+            color: #1a1f2b;
+            line-height: 1.6;
+            padding: 18px 22px 40px;
+        }
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 28px 34px;
+            border-radius: var(--radius);
+            margin-bottom: 26px;
+            text-align: center;
+            border-left: 6px solid var(--gold);
+        }
+        header h1 {
+            font-size: 1.6rem;
+            letter-spacing: .3px;
+        }
+        header .subtitle {
+            font-size: .92rem;
+            color: #bcc5d4;
+            margin-top: 5px;
+        }
+        .stage-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 5px solid var(--gold);
+        }
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #e2e6ef;
+        }
+        .card h3 {
+            color: var(--navy-light);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .theory-card {
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 16px 18px;
+            border-top: 4px solid var(--navy);
+        }
+        .theory-card h4 {
+            color: var(--navy);
+            font-size: .95rem;
+            margin-bottom: 6px;
+        }
+        .theory-card ul {
+            font-size: .85rem;
+            padding-left: 16px;
+            color: #333;
+        }
+        .theory-card li {
+            margin-bottom: 4px;
+        }
+        .app-box {
+            background: #eef3f9;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-top: 10px;
+            font-size: .84rem;
+            border-left: 4px solid var(--gold);
+        }
+        .trap-box {
+            background: #fff5f0;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-top: 8px;
+            font-size: .85rem;
+            border-left: 4px solid #c95d2c;
+        }
+        details {
+            margin-top: 8px;
+            border: 1px solid #dde1e8;
+            border-radius: 6px;
+            padding: 8px 14px;
+            background: #fafbfc;
+            cursor: pointer;
+        }
+        details summary {
+            font-weight: 700;
+            color: #1a3a5c;
+            font-size: .87rem;
+            outline: none;
+            cursor: pointer;
+            padding: 4px 0;
+        }
+        details[open] summary {
+            color: #0a5c2a;
+        }
+        .answer-content {
+            font-size: .83rem;
+            color: #2a2a2a;
+            padding-top: 6px;
+            border-top: 1px dashed #ccc;
+            margin-top: 4px;
+        }
+        .soal-pg {
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .soal-pg:last-child {
+            border-bottom: none;
+        }
+        .soal-pg .opsi {
+            margin-left: 16px;
+            font-size: .88rem;
+        }
+        .esai-card {
+            background: #fdfdfd;
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            border: 1px solid #e0e4ed;
+        }
+        .esai-card h4 {
+            color: var(--navy);
+            margin-bottom: 6px;
+        }
+        .perintah {
+            font-weight: 600;
+            color: #8b6914;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .rubrik-bullet {
+            font-size: .84rem;
+            margin: 4px 0 4px 18px;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            font-size: .78rem;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UJIAN KOMPREHENSIF MANAJEMEN PEMASARAN</h1>
+            <div class="subtitle">Bab 8: Produk, Layanan, dan Merek — Membangun Nilai bagi Pelanggan<br>Dosen Penguji Utama | Spesialisasi: Industri Jasa Keuangan &amp; Fintech</div>
+        </header>
+
+        <!-- ============ TAHAP 1: BEDAH KONSEP ============ -->
+        <div class="stage-title">TAHAP 1 &mdash; Bedah Konsep: Spesialisasi Jasa Keuangan</div>
+        <div class="card">
+            <h3>1. Peta 3 Kerangka Kerja / Teori Utama Bab 8</h3>
+            <div class="grid-3">
+                <div class="theory-card">
+                    <h4>Teori A: Tiga Tingkat Produk (Gambar 8.1)</h4>
+                    <ul>
+                        <li><strong>Nilai Inti Pelanggan</strong> &mdash; manfaat fundamental yang dibeli</li>
+                        <li><strong>Produk Aktual</strong> &mdash; fitur, desain, merek, kemasan</li>
+                        <li><strong>Produk Tambahan</strong> &mdash; layanan purna jual, garansi, dukungan</li>
+                    </ul>
+                </div>
+                <div class="theory-card">
+                    <h4>Teori B: Empat Karakteristik Jasa &mdash; IHIP (Gambar 8.3)</h4>
+                    <ul>
+                        <li><strong>Intangibility</strong> &mdash; tak berwujud, tak bisa dicicipi sebelum dibeli</li>
+                        <li><strong>Heterogeneity</strong> &mdash; variabilitas kualitas antar penyedia</li>
+                        <li><strong>Inseparability</strong> &mdash; produksi &amp; konsumsi bersamaan</li>
+                        <li><strong>Perishability</strong> &mdash; tak bisa disimpan, mudah kadaluwarsa</li>
+                    </ul>
+                </div>
+                <div class="theory-card">
+                    <h4>Teori C: Rantai Keuntungan Jasa (Service Profit Chain)</h4>
+                    <ul>
+                        <li><strong>Kualitas Layanan Internal</strong> &rarr; Karyawan puas &amp; produktif</li>
+                        <li><strong>Nilai Layanan Lebih Besar</strong> &rarr; Pelanggan puas &amp; loyal</li>
+                        <li><strong>Pertumbuhan Laba Sehat</strong> sebagai hasil akhir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top:20px;">2. Penerapan Tajam pada Industri Perbankan / Fintech</h3>
+            <div class="grid-3">
+                <div class="app-box">
+                    <strong>Teori A &rarr; Rekening Tabungan Digital</strong><br>
+                    <em>Nilai Inti:</em> keamanan &amp; likuiditas dana.<br>
+                    <em>Produk Aktual:</em> mobile banking app, kartu debit bermerek.<br>
+                    <em>Tambahan:</em> notifikasi real-time, program loyalitas poin, asuransi saldo.
+                </div>
+                <div class="app-box">
+                    <strong>Teori B &rarr; Layanan Wealth Management</strong><br>
+                    <em>Intangibility:</em> nasabah beli "ketenangan masa depan."<br>
+                    <em>Heterogeneity:</em> kualitas advisor berbeda per individu.<br>
+                    <em>Inseparability:</em> sesi konsultasi = produksi + konsumsi.<br>
+                    <em>Perishability:</em> slot advisor kosong tak bisa disimpan.
+                </div>
+                <div class="app-box">
+                    <strong>Teori C &rarr; Bank Digital vs. Konvensional</strong><br>
+                    Training CS digital yang unggul &rarr; kepuasan karyawan frontliner &rarr; interaksi pelanggan lebih baik &rarr; loyalitas nasabah tinggi &rarr; profitabilitas jangka panjang.
+                </div>
+            </div>
+
+            <h3 style="margin-top:20px;">3. Dua Jebakan Logika (Kesalahan Konseptual Mahasiswa Saat Ujian)</h3>
+            <div class="trap-box">
+                <strong>Jebakan #1: "Produk bank adalah uang."</strong><br>
+                Kesalahan fatal. Uang adalah <em>objek transaksi</em>, bukan produk. Produk bank adalah <em>layanan</em> penyimpanan, penyaluran kredit, atau fasilitas pembayaran. Nilai inti pelanggan bukan uangnya, melainkan <em>manfaat</em>: keamanan, akses, atau imbal hasil.
+            </div>
+            <div class="trap-box">
+                <strong>Jebakan #2: "Semakin tinggi kualitas kinerja produk perbankan, semakin baik."</strong><br>
+                Tidak selalu. Tabungan dengan bunga tertinggi bisa berarti risiko likuiditas bagi bank. Kualitas harus <em>konsisten</em> dengan positioning &amp; kapasitas bank. Kualitas kesesuaian (consistency) lebih penting daripada kualitas kinerja absolut.
+            </div>
+        </div>
+
+        <!-- ============ TAHAP 2: 20 SOAL PILIHAN GANDA ============ -->
+        <div class="stage-title">TAHAP 2 &mdash; 20 Soal Pilihan Ganda Interaktif (Studi Kasus Mini)</div>
+        <div class="card">
+            <p style="font-size:.88rem;color:#555;margin-bottom:14px;">Setiap soal berbasis skenario nyata industri perbankan/fintech. Pilih jawaban terbaik, lalu klik <strong>"Lihat Kunci Jawaban"</strong> untuk verifikasi.</p>
+
+            <!-- Soal 1 -->
+            <div class="soal-pg"><strong>1.</strong> Bank "NusaPrime" meluncurkan produk tabungan emas digital. Nasabah membeli gramasi emas via aplikasi tanpa memegang fisiknya. Berdasarkan Teori Tiga Tingkat Produk, <em>nilai inti pelanggan</em> dari produk ini adalah...
+                <div class="opsi">A. Aplikasi mobile yang user-friendly<br>B. Kepemilikan emas fisik yang disimpan di brankas bank<br>C. Proteksi nilai aset terhadap inflasi dan akumulasi kekayaan jangka panjang<br>D. Sertifikat emas digital yang diterbitkan bank</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: C.</strong> Nilai inti adalah manfaat fundamental yang dicari pelanggan—di sini adalah proteksi kekayaan dan akumulasi aset, bukan fitur aplikasi atau sertifikat.</div></details>
+            </div>
+
+            <!-- Soal 2 -->
+            <div class="soal-pg"><strong>2.</strong> Fintech "PaySwift" menawarkan fitur <em>instant loan</em> yang bisa cair dalam 2 menit. Namun, banyak pengguna mengeluh bahwa limit yang disetujui seringkali berbeda jauh dari yang diiklankan. Masalah ini paling tepat dijelaskan oleh karakteristik jasa...
+                <div class="opsi">A. Intangibility<br>B. Heterogeneity (Variabilitas)<br>C. Inseparability<br>D. Perishability</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Variabilitas (heterogeneity) terjadi karena keputusan limit kredit bergantung pada algoritma scoring dan profil individu yang berbeda-beda, sehingga hasil tidak seragam.</div></details>
+            </div>
+
+            <!-- Soal 3 -->
+            <div class="soal-pg"><strong>3.</strong> Bank "CitiTrust" melatih seluruh teller dan CS-nya untuk selalu menyapa nasabah dengan nama, mengingat preferensi transaksi, dan memberikan solusi personal. Ini adalah contoh penerapan...
+                <div class="opsi">A. Pemasaran eksternal<br>B. Pemasaran internal<br>C. Pemasaran interaktif<br>D. Pemasaran transaksional</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: C.</strong> Pemasaran interaktif menekankan kualitas interaksi antara karyawan dan pelanggan selama proses layanan berlangsung.</div></details>
+            </div>
+
+            <!-- Soal 4 -->
+            <div class="soal-pg"><strong>4.</strong> Sebuah bank syariah meluncurkan produk "Pembiayaan Mikro Berkah" untuk UMKM. Dalam konteks <em>positioning merek</em> pada tingkat tertinggi, bank tersebut sebaiknya memposisikan produk ini berdasarkan...
+                <div class="opsi">A. Margin keuntungan yang kompetitif<br>B. Nilai-nilai dan keyakinan: keberkahan, keadilan, dan pemberdayaan ekonomi umat<br>C. Proses pengajuan yang cepat dan mudah<br>D. Jaringan kantor cabang yang luas</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Positioning tingkat tertinggi adalah pada keyakinan dan nilai-nilai, yang menciptakan hubungan emosional mendalam—tepat untuk segmen syariah.</div></details>
+            </div>
+
+            <!-- Soal 5 -->
+            <div class="soal-pg"><strong>5.</strong> Saat pandemi, antrean di cabang bank "MegaRaya" melonjak drastis di jam 10-14, namun sepi di jam lain. Manajer cabang memutuskan menambah teller paruh waktu di jam sibuk. Ini adalah strategi mengatasi...
+                <div class="opsi">A. Intangibility<br>B. Inseparability<br>C. Perishability<br>D. Heterogeneity</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: C.</strong> Perishability berarti kapasitas layanan yang tak terpakai di jam sepi hilang selamanya; solusinya adalah manajemen permintaan-penawaran dengan staf paruh waktu.</div></details>
+            </div>
+
+            <!-- Soal 6 -->
+            <div class="soal-pg"><strong>6.</strong> Bank "DigitalOne" tidak memiliki kantor cabang fisik. Seluruh layanan dilakukan via aplikasi dan call center 24/7. Untuk mengurangi <em>intangibility</em>, strategi paling tepat yang bisa dilakukan adalah...
+                <div class="opsi">A. Menurunkan biaya administrasi bulanan<br>B. Menampilkan testimoni video nasabah, rating keamanan, dan sertifikasi OJK secara prominent di aplikasi<br>C. Memperbanyak fitur di aplikasi<br>D. Memberikan bunga tabungan tertinggi di pasar</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Mengurangi intangibility berarti memberikan bukti fisik dan sinyal kepercayaan—testimoni, rating, sertifikasi adalah sinyal kualitas yang kasat mata.</div></details>
+            </div>
+
+            <!-- Soal 7 -->
+            <div class="soal-pg"><strong>7.</strong> Dalam Service Profit Chain, bank yang menginvestasikan anggaran besar pada pelatihan karyawan frontliner dan membangun budaya kerja positif sedang memperkuat mata rantai...
+                <div class="opsi">A. Nilai layanan yang lebih besar<br>B. Pelanggan yang puas dan setia<br>C. Kualitas layanan internal<br>D. Laba dan pertumbuhan yang sehat</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: C.</strong> Kualitas layanan internal—seleksi, pelatihan, lingkungan kerja—adalah fondasi pertama dalam rantai keuntungan jasa.</div></details>
+            </div>
+
+            <!-- Soal 8 -->
+            <div class="soal-pg"><strong>8.</strong> "Kartu Kredit Platinum TravelReward" dari Bank "Elite" menawarkan akses lounge bandara, asuransi perjalanan, dan concierge service. Dalam klasifikasi produk konsumen, kartu kredit ini termasuk...
+                <div class="opsi">A. Produk kebutuhan sehari-hari (convenience product)<br>B. Produk belanja (shopping product)<br>C. Produk khusus (specialty product)<br>D. Produk yang tidak dicari (unsought product)</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: C.</strong> Produk khusus memiliki karakteristik unik dan identitas merek kuat sehingga nasabah bersedia melakukan upaya khusus untuk memperolehnya.</div></details>
+            </div>
+
+            <!-- Soal 9 -->
+            <div class="soal-pg"><strong>9.</strong> Fintech "LendNow" menggunakan dua merek berbeda: "LendNow Personal" untuk pinjaman konsumtif dan "LendNow Biz" untuk modal usaha. Strategi pengembangan merek ini disebut...
+                <div class="opsi">A. Perluasan lini (line extension)<br>B. Perluasan merek (brand extension)<br>C. Multimerek (multibrands)<br>D. Merek baru (new brand)</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: A.</strong> Perluasan lini adalah menggunakan nama merek yang sama pada varian baru dalam kategori produk yang sama (pinjaman).</div></details>
+            </div>
+
+            <!-- Soal 10 -->
+            <div class="soal-pg"><strong>10.</strong> Bank "SolidTrust" memiliki ekuitas merek yang sangat tinggi. Manakah dari berikut ini yang BUKAN merupakan manfaat langsung dari ekuitas merek yang kuat?
+                <div class="opsi">A. Daya tawar lebih besar terhadap regulator dan OJK<br>B. Kemudahan meluncurkan perluasan lini produk<br>C. Perlindungan terhadap persaingan harga ketat<br>D. Loyalitas dan preferensi konsumen yang tinggi</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: A.</strong> Ekuitas merek yang kuat memberikan keunggulan kompetitif di pasar, tetapi tidak otomatis meningkatkan daya tawar terhadap regulator.</div></details>
+            </div>
+
+            <!-- Soal 11 -->
+            <div class="soal-pg"><strong>11.</strong> Seorang nasabah VIP Bank "Prestige" mengeluhkan pengalaman buruk saat bertransaksi. Relationship manager segera menghubungi, meminta maaf tulus, memberikan penjelasan, dan menawarkan upgrade limit sementara. Tindakan ini disebut...
+                <div class="opsi">A. Pemasaran internal<br>B. Service recovery (pemulihan layanan)<br>C. Diferensiasi layanan<br>D. Manajemen produktivitas</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Service recovery yang baik—permintaan maaf, penjelasan, kompensasi—dapat mengubah pelanggan marah menjadi loyal.</div></details>
+            </div>
+
+            <!-- Soal 12 -->
+            <div class="soal-pg"><strong>12.</strong> Bank "SyariahMandiri" memperluas lini produknya dari tabungan haji ke pembiayaan umrah, asuransi syariah, dan investasi emas syariah. Dimensi bauran produk yang sedang diperluas adalah...
+                <div class="opsi">A. Lebar (width)<br>B. Panjang (length)<br>C. Kedalaman (depth)<br>D. Konsistensi (consistency)</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: A.</strong> Lebar bauran produk mengacu pada jumlah lini produk berbeda—bank menambah lini baru di luar tabungan.</div></details>
+            </div>
+
+            <!-- Soal 13 -->
+            <div class="soal-pg"><strong>13.</strong> Aplikasi "GoFinance" memiliki fitur pembayaran, pinjaman, investasi, dan asuransi dalam satu platform. Ini adalah contoh strategi...
+                <div class="opsi">A. Co-branding<br>B. Perluasan merek (brand extension)<br>C. Pengisian lini (line filling)<br>D. Merek baru</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Brand extension: menggunakan nama merek yang sudah ada untuk masuk ke kategori produk baru (dari pembayaran ke pinjaman, investasi, asuransi).</div></details>
+            </div>
+
+            <!-- Soal 14 -->
+            <div class="soal-pg"><strong>14.</strong> Dalam konteks produk perbankan, "bebas dari cacat transaksi—tidak ada kesalahan posting, tidak ada selisih saldo, setiap transaksi tercatat akurat" adalah definisi dari...
+                <div class="opsi">A. Kualitas kinerja (performance quality)<br>B. Kualitas kesesuaian (conformance quality)<br>C. Gaya produk (style)<br>D. Desain produk (design)</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Kualitas kesesuaian adalah konsistensi memberikan tingkat kinerja yang dijanjikan—bebas cacat dan akurat setiap saat.</div></details>
+            </div>
+
+            <!-- Soal 15 -->
+            <div class="soal-pg"><strong>15.</strong> Bank "RuralKita" yang fokus di segmen bawah meluncurkan produk "Tabungan Prioritas" dengan minimum saldo Rp 500 juta untuk bersaing di segmen atas. Strategi ini adalah...
+                <div class="opsi">A. Perluasan lini ke bawah<br>B. Perluasan lini ke atas<br>C. Pengisian lini<br>D. Perampingan portofolio</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Perluasan ke atas: bank yang bermain di segmen bawah menambah produk premium untuk meraih margin lebih tinggi dan menambah prestise.</div></details>
+            </div>
+
+            <!-- Soal 16 -->
+            <div class="soal-pg"><strong>16.</strong> Fitur "Face ID Login" pada mobile banking app adalah contoh atribut produk pada level...
+                <div class="opsi">A. Nilai inti pelanggan<br>B. Produk aktual<br>C. Produk tambahan<br>D. Manfaat inti</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Fitur biometrik adalah bagian dari produk aktual—atribut nyata yang membungkus nilai inti (keamanan akses).</div></details>
+            </div>
+
+            <!-- Soal 17 -->
+            <div class="soal-pg"><strong>17.</strong> "Bank Jago" dan "GoTo" berkolaborasi menghadirkan fitur "GoPay Tabungan" di aplikasi Gojek. Strategi sponsor merek ini disebut...
+                <div class="opsi">A. Merek pabrikan (national brand)<br>B. Merek toko (private brand)<br>C. Lisensi (licensing)<br>D. Co-branding</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: D.</strong> Co-branding adalah penggunaan dua merek mapan dari perusahaan berbeda pada produk yang sama.</div></details>
+            </div>
+
+            <!-- Soal 18 -->
+            <div class="soal-pg"><strong>18.</strong> Sebuah bank mendapati bahwa 80% keluhan nasabah berasal dari 20% cabang yang stafnya kurang terlatih. Dalam kerangka Service Profit Chain, akar masalahnya ada pada...
+                <div class="opsi">A. Kualitas layanan internal<br>B. Nilai layanan pelanggan<br>C. Kepuasan pelanggan<br>D. Pertumbuhan laba</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: A.</strong> Staf yang kurang terlatih adalah masalah kualitas layanan internal—seleksi dan pelatihan karyawan yang tidak memadai.</div></details>
+            </div>
+
+            <!-- Soal 19 -->
+            <div class="soal-pg"><strong>19.</strong> Produk "Kredit Tanpa Agunan" dari fintech "QuickFund" termasuk dalam klasifikasi produk konsumen sebagai...
+                <div class="opsi">A. Convenience product<br>B. Shopping product<br>C. Specialty product<br>D. Unsought product</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: D.</strong> Kredit tanpa agunan seringkali tidak dicari secara aktif sebelum adanya kebutuhan mendesak; perlu pemasaran agresif untuk membangkitkan kesadaran.</div></details>
+            </div>
+
+            <!-- Soal 20 -->
+            <div class="soal-pg"><strong>20.</strong> Bank "GlobalTrust" menghabiskan Rp 800 miliar per tahun untuk iklan dan sponsorship. Namun, survei menunjukkan loyalitas nasabah menurun. Pernyataan yang paling tepat sesuai Bab 8 adalah...
+                <div class="opsi">A. Anggaran iklan harus dinaikkan 2x lipat<br>B. Merek tidak dipertahankan oleh iklan, melainkan oleh pengalaman merek yang dialami pelanggan<br>C. Bank harus mengganti agensi periklanan<br>D. Produk bank perlu diturunkan harganya</div>
+                <details><summary>Lihat Kunci Jawaban</summary><div class="answer-content"><strong>Jawaban: B.</strong> Sesuai Bab 8: merek dipertahankan oleh pengalaman pelanggan di setiap titik sentuh, bukan semata-mata oleh iklan.</div></details>
+            </div>
+        </div>
+
+        <!-- ============ TAHAP 3: 5 SOAL ESAI ============ -->
+        <div class="stage-title">TAHAP 3 &mdash; 5 Soal Esai Kasus Rigid (Ujian Akhir)</div>
+        <div class="card">
+            <p style="font-size:.87rem;color:#555;margin-bottom:10px;">Setiap soal menyajikan skenario konflik manajerial di bank komersial/fintech. <strong>Rumuskan keputusan manajerial Anda dengan justifikasi berdasarkan teori Bab 8.</strong></p>
+
+            <div class="esai-card">
+                <h4>Soal Esai #1: Krisis Kepercayaan Mobile Banking</h4>
+                <p>Bank "NusaDamai" baru saja mengalami insiden kebocoran data 50.000 nasabah akibat celah keamanan di aplikasi mobile banking-nya. Nasabah panik, menarik dana besar-besaran, dan media sosial dipenuhi kecaman. Direktur Utama meminta Anda—VP Pemasaran—untuk merancang strategi pemulihan merek dan layanan yang komprehensif.</p>
+                <p class="perintah">Rumuskan keputusan manajerial Anda: (a) Bagaimana memulihkan kepercayaan nasabah menggunakan kerangka Service Recovery &amp; Brand Equity? (b) Bagaimana mengelola empat karakteristik jasa (IHIP) dalam proses pemulihan ini? (c) Justifikasi setiap langkah dengan teori Bab 8.</p>
+            </div>
+
+            <div class="esai-card">
+                <h4>Soal Esai #2: Dilema Perluasan Merek ke Segmen Ultra-Mikro</h4>
+                <p>Bank "ElitePrime" dikenal sebagai bank premium dengan ekuitas merek kuat di segmen affluent (nasabah dengan saldo rata-rata >Rp 500 juta). Dewan Direksi ingin meluncurkan produk "Tabungan ElitKu" dengan setoran awal Rp 50.000 untuk menyasar segmen ultra-mikro. VP Risiko memperingatkan risiko kanibalisasi citra merek dan penurunan kualitas layanan.</p>
+                <p class="perintah">Rumuskan keputusan manajerial Anda: (a) Apakah perluasan lini ke bawah ini layak? Gunakan analisis Brand Positioning &amp; Brand Extension. (b) Alternatif strategi merek apa yang bisa diusulkan? (c) Justifikasi penuh dengan teori Bab 8.</p>
+            </div>
+
+            <div class="esai-card">
+                <h4>Soal Esai #3: Konflik Antara Produktivitas dan Kualitas Layanan</h4>
+                <p>Fintech "LajuCepat" memiliki call center dengan 200 agen. Untuk menekan biaya operasional, COO mengusulkan mengganti 60% agen dengan chatbot AI dan menutup layanan telepon di akhir pekan. Head of Customer Experience memprotes keras karena data menunjukkan 70% keluhan kompleks diselesaikan melalui interaksi manusia, dan rating kepuasan turun 22% saat uji coba chatbot.</p>
+                <p class="perintah">Rumuskan keputusan manajerial Anda: (a) Bagaimana menyeimbangkan produktivitas dan kualitas layanan sesuai Bab 8? (b) Evaluasi menggunakan kerangka Service Profit Chain dan karakteristik jasa. (c) Apa solusi tengah yang Anda rekomendasikan?</p>
+            </div>
+
+            <div class="esai-card">
+                <h4>Soal Esai #4: Co-Branding yang Gagal</h4>
+                <p>Bank "MitraUsaha" baru saja mengakhiri kemitraan co-branding kartu kredit dengan maskapai "SkyFly" setelah 2 tahun karena maskapai tersebut tersangkut skandal keselamatan penerbangan. Penjualan kartu turun 35%, dan 12% pemegang kartu menutup rekeningnya. CEO meminta Anda menyusun strategi pemulihan dan pelajaran untuk kemitraan co-branding selanjutnya.</p>
+                <p class="perintah">Rumuskan keputusan manajerial Anda: (a) Bagaimana memulihkan merek pasca co-branding yang gagal? (b) Kriteria apa yang harus diterapkan untuk memilih mitra co-branding berikutnya berdasarkan Bab 8? (c) Justifikasi strategis.</p>
+            </div>
+
+            <div class="esai-card">
+                <h4>Soal Esai #5: Transformasi Cabang Fisik di Era Digital</h4>
+                <p>Bank "TradisiNusa" memiliki 450 cabang di seluruh Indonesia, namun tingkat kunjungan cabang turun 40% dalam 3 tahun terakhir. Mobile banking app telah menangani 85% transaksi rutin. Direktur Jaringan mengusulkan menutup 200 cabang dan mem-PHK 3.000 karyawan. Direktur SDM menolak keras karena bertentangan dengan nilai inti perusahaan: "Melayani dengan Hati, Hadir untuk Negeri."</p>
+                <p class="perintah">Rumuskan keputusan manajerial Anda: (a) Bagaimana mentransformasi peran cabang fisik tanpa menghancurkan nilai inti merek? Gunakan Teori Tiga Tingkat Produk dan Service Profit Chain. (b) Apa alternatif strategi yang mempertahankan karyawan namun meningkatkan relevansi? (c) Justifikasi lengkap.</p>
+            </div>
+        </div>
+
+        <!-- ============ TAHAP 4: RUBRIK PENILAIAN ============ -->
+        <div class="stage-title">TAHAP 4 &mdash; Rubrik Validasi 'Nilai A'</div>
+        <div class="card">
+            <details>
+                <summary style="font-size:1rem;color:#0a1628;">Buka Rubrik Penilaian Esai (Klik di sini)</summary>
+                <div class="answer-content" style="font-size:.85rem;line-height:1.7;padding-top:10px;">
+                    <p><strong>Rubrik ini berlaku untuk kelima soal esai. Untuk mencapai Nilai A, mahasiswa WAJIB menunjukkan tiga elemen berikut per soal:</strong></p>
+
+                    <div style="margin-top:12px;"><strong>Soal Esai #1 — Krisis Kepercayaan Mobile Banking:</strong>
+                        <div class="rubrik-bullet">&bull; <strong>Keputusan Strategis Mutlak:</strong> Mengimplementasikan Service Recovery tiga komponen (permintaan maaf publik CEO, penjelasan transparan tentang penyebab dan perbaikan, kompensasi berupa proteksi identitas gratis 2 tahun) + kampanye komunikasi multi-titik sentuh untuk membangun kembali Brand Equity.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Teori Wajib yang Harus Distir:</strong> (1) Empat Karakteristik Jasa (IHIP)—khususnya Intangibility dan bagaimana memberikan bukti fisik pemulihan; (2) Brand Equity—diferensiasi, relevansi, pengetahuan, penghargaan; (3) Service Recovery &amp; Rantai Keuntungan Jasa.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Metrik/Risiko Bisnis yang Harus Dievaluasi:</strong> Net Promoter Score (NPS) pra-dan-pasca insiden, tingkat retensi nasabah 90 hari pasca insiden, volume penarikan dana vs. dana masuk kembali, sentimen media sosial (rasio positif/negatif).</div>
+                    </div>
+
+                    <div style="margin-top:12px;"><strong>Soal Esai #2 — Dilema Perluasan Merek ke Segmen Ultra-Mikro:</strong>
+                        <div class="rubrik-bullet">&bull; <strong>Keputusan Strategis Mutlak:</strong> TIDAK melakukan perluasan lini ke bawah dengan merek yang sama. Alternatif: menciptakan merek baru (sub-brand terpisah) atau mengakuisisi fintech mikro yang sudah ada untuk menjaga citra premium "ElitePrime" sekaligus menangkap segmen ultra-mikro.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Teori Wajib yang Harus Distir:</strong> (1) Brand Positioning pada tiga tingkatan (atribut, manfaat, keyakinan/nilai); (2) Risiko Brand Extension—kebingungan citra merek utama; (3) Strategi Multimerek dan Merek Baru (Gambar 8.6).</div>
+                        <div class="rubrik-bullet">&bull; <strong>Metrik/Risiko Bisnis yang Harus Dievaluasi:</strong> Risiko kanibalisasi Brand Equity segmen affluent (diukur via Brand Asset Valuator), potensi margin segmen ultra-mikro vs. biaya akuisisi nasabah, risiko kehilangan nasabah premium yang merasa merek terdegradasi.</div>
+                    </div>
+
+                    <div style="margin-top:12px;"><strong>Soal Esai #3 — Konflik Produktivitas vs. Kualitas Layanan:</strong>
+                        <div class="rubrik-bullet">&bull; <strong>Keputusan Strategis Mutlak:</strong> Model hibrida: chatbot AI menangani 60% pertanyaan sederhana (cek saldo, mutasi, FAQ) dan eskalasi otomatis ke agen manusia untuk keluhan kompleks. Layanan telepon akhir pekan dipertahankan dengan sistem shift bergilir + insentif. Evaluasi produktivitas tidak boleh mengorbankan esensi layanan (Bab 8).</div>
+                        <div class="rubrik-bullet">&bull; <strong>Teori Wajib yang Harus Distir:</strong> (1) Manajemen Produktivitas Layanan—keseimbangan efisiensi dan kualitas; (2) Karakteristik Inseparability—interaksi manusia tetap krusial; (3) Service Profit Chain—kepuasan karyawan memengaruhi kepuasan pelanggan.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Metrik/Risiko Bisnis yang Harus Dievaluasi:</strong> First Contact Resolution (FCR) untuk chatbot vs. agen manusia, Customer Satisfaction Score (CSAT), biaya per kontak, tingkat eskalasi dari chatbot ke agen manusia, turnover agen call center.</div>
+                    </div>
+
+                    <div style="margin-top:12px;"><strong>Soal Esai #4 — Co-Branding yang Gagal:</strong>
+                        <div class="rubrik-bullet">&bull; <strong>Keputusan Strategis Mutlak:</strong> Pemutusan kontrak co-branding secara resmi + kampanye komunikasi krisis yang menegaskan bahwa Bank "MitraUsaha" tidak terkait skandal mitra. Penggantian kartu otomatis dengan desain baru tanpa logo maskapai. Evaluasi kriteria seleksi mitra co-branding masa depan: due diligence reputasi, keselarasan nilai merek, dan klausul terminasi cepat.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Teori Wajib yang Harus Distir:</strong> (1) Co-branding—keuntungan dan keterbatasan (kontrak rumit, risiko reputasi bersama); (2) Brand Equity dan dampak negatif dari asosiasi merek yang rusak; (3) Brand Positioning dan pentingnya menjaga konsistensi nilai merek.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Metrik/Risiko Bisnis yang Harus Dievaluasi:</strong> Tingkat penutupan kartu dan rekening pasca insiden, biaya penggantian kartu baru, dampak terhadap akuisisi nasabah baru, skor kesehatan merek (Brand Health Score) sebelum dan sesudah pemutusan kemitraan.</div>
+                    </div>
+
+                    <div style="margin-top:12px;"><strong>Soal Esai #5 — Transformasi Cabang Fisik di Era Digital:</strong>
+                        <div class="rubrik-bullet">&bull; <strong>Keputusan Strategis Mutlak:</strong> Transformasi peran cabang dari pusat transaksi menjadi pusat konsultasi dan komunitas keuangan. Cabang yang ditutup dialihfungsikan menjadi "Financial Hub" yang lebih kecil dengan staf sebagai financial advisor, bukan teller. Pelatihan ulang massal (reskilling) 3.000 karyawan untuk peran advisory, digital support, dan community banking.</div>
+                        <div class="rubrik-bullet">&bull; <strong>Teori Wajib yang Harus Distir:</strong> (1) Tiga Tingkat Produk—cabang sebagai "Produk Tambahan" yang memberikan pengalaman dan hubungan personal; (2) Service Profit Chain—mempertahankan karyawan dan melatih ulang mereka; (3) Pemasaran Internal dan Interaktif (Gambar 8.4).</div>
+                        <div class="rubrik-bullet">&bull; <strong>Metrik/Risiko Bisnis yang Harus Dievaluasi:</strong> Biaya operasional cabang vs. pendapatan per cabang, Net Promoter Score nasabah yang menggunakan cabang vs. purely digital, produktivitas karyawan pasca reskilling, risiko sosial dan reputasi dari PHK massal vs. retensi karyawan.</div>
+                    </div>
+
+                    <p style="margin-top:16px;font-weight:700;color:#0a1628;">Catatan Penguji: Mahasiswa yang hanya menyebutkan teori tanpa aplikasi kontekstual pada skenario spesifik di atas tidak memenuhi syarat Nilai A. Kedalaman analisis dan keberanian mengambil keputusan manajerial yang terjustifikasi adalah kunci.</p>
+                </div>
+            </details>
+        </div>
+
+        <footer>
+            &copy; 2026 Ujian Komprehensif Manajemen Pemasaran | Dosen Penguji Utama | Bab 8: Produk, Layanan, dan Merek<br>
+            Materi berbasis buku teks standar: <em>Marketing Management</em> &mdash; Produk, Layanan, dan Merek: Membangun Nilai bagi Pelanggan
+        </footer>
+    </div>
+</body>
+</html>
